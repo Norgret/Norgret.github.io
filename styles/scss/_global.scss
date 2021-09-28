@@ -1,0 +1,92 @@
+$gray: #DADFEA;
+$darkgray: #575656;
+$blue: #58A9FF;
+$black: #000000;
+$white: #ffffff;
+
+$side-margin: 7vw;
+
+
+@mixin flex-row {
+	display: flex;
+	flex-direction: row;
+}
+@mixin flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	@include flex-column;
+	align-items: center;
+	width: 100vw;
+	min-height: 100vh;
+	background-color: $white;
+}
+ul {
+	margin: 10px 30px auto 30px;
+}
+ul > li {
+	list-style-type: square;
+}
+
+.text {
+	margin: auto auto 20px auto;
+	color: $darkgray;
+	font-family: sans-serif;
+	text-decoration: none;
+	font-size: 1.0em;
+	font-weight: 500;
+	line-height: 140%;
+}
+.text.paragraph {
+	text-align: justify;
+}
+.text.title {
+	padding: 10px;
+	margin-top: 40px;
+	width: auto;
+	text-align: center;
+	background-color: $black;
+	color: $white;
+	font-family: menlo;
+	font-size: 1.6em;
+	font-weight: 900;
+}
+.text.subheading {
+	margin: 0 auto auto auto;
+	font-family: menlo;
+	font-size: 1.2em;
+	font-weight: 900;
+	color: $white;
+}
+.text.bold {
+	font-weight: 900;
+}
+.text.subtitle {}
+.text.link {}
+.text.link:hover {
+	text-decoration: underline;
+}
+.text.link.tool {}
+.text.link.tool:hover {}
+
+
+
+$media-breakpoint: 1000px;
+
+.desktop {
+	@media screen and (max-width: $media-breakpoint) {
+		display: none;
+	}
+}
+.mobile {
+	@media screen and (min-width: $media-breakpoint) {
+		display: none;
+	}
+}
